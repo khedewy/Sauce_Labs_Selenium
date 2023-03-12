@@ -1,0 +1,51 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="TestLoginFunction"/>
+                </methods>
+            </class>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="TestLoginFunction"/>
+                    <include name="navigateToProductPage"/>
+                    <include name="add_productToCart"/>
+                </methods>
+            </class>
+            <class name="tests.ProceedCheckoutTest">
+                <methods>
+                    <include name="TestLoginFunction"/>
+                    <include name="navigateToProductPage"/>
+                    <include name="add_productToCart"/>
+                    <include name="navigateToProceedCheckout"/>
+                    <include name="completeCheckout"/>
+                    <include name="finishOrder"/>
+                </methods>
+            </class>
+            <class name="tests.AddTowProductTest">
+                <methods>
+                    <include name="TestLoginFunction"/>
+                    <include name="navigateToProductPage"/>
+                    <include name="add_productToCart"/>
+                    <include name="continueShopping"/>
+                    <include name="navigateToSecondProduct"/>
+                    <include name="addSecondProductToCart"/>
+                </methods>
+            </class>
+            <class name="tests.UpdateCartTest">
+                <methods>
+                    <include name="TestLoginFunction"/>
+                    <include name="navigateToProductPage"/>
+                    <include name="add_productToCart"/>
+                    <include name="continueShopping"/>
+                    <include name="navigateToSecondProduct"/>
+                    <include name="addSecondProductToCart"/>
+                    <include name="updateCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
